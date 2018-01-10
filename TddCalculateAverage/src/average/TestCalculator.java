@@ -18,7 +18,7 @@ public class TestCalculator {
 			assertEquals(334.33, calculator.average(), .01);
 		}
 		catch (NoElementsException e) {
-			
+			fail("Caught NoElementsException");
 		}
 	}
 	
