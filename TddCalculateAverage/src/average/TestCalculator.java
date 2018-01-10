@@ -16,5 +16,16 @@ public class TestCalculator {
 		System.out.println(calculator.average());
 		assertEquals(334.33, calculator.average(), .01);
 	}
+	
+	@Test
+	public void testDivideByZero() {
+		try {
+			new Calculator().average();
+			fail("expected NoElementsException");
+			catch (NoElementsException e) {
+				
+			}
+		}
+	}
 
 }
