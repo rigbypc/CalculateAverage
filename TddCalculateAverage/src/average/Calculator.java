@@ -15,6 +15,12 @@ public class Calculator {
 	}
 	
 	public double average() {
-		return Double.NaN;
+		double sum = 0;
+		
+		for (Double element : elements) {
+			sum += element;
+		}
+		
+		return sum/elements.size();
 	}
 }

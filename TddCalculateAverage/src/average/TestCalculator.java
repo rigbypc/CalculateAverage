@@ -13,7 +13,8 @@ public class TestCalculator {
 		calculator.addElement(2);
 		calculator.addElement(1000);
 		
-		assertEquals(334.33, calculator.average());
+		System.out.println(calculator.average());
+		assertEquals(334.33, calculator.average(), .01);
 	}
 
 }
