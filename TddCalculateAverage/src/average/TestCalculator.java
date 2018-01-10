@@ -13,8 +13,13 @@ public class TestCalculator {
 		calculator.addElement(2);
 		calculator.addElement(1000);
 		
-		System.out.println(calculator.average());
-		assertEquals(334.33, calculator.average(), .01);
+		try {
+			System.out.println(calculator.average());
+			assertEquals(334.33, calculator.average(), .01);
+		}
+		catch (NoElementsException e) {
+			
+		}
 	}
 	
 	@Test
@@ -22,10 +27,12 @@ public class TestCalculator {
 		try {
 			new Calculator().average();
 			fail("expected NoElementsException");
-			catch (NoElementsException e) {
-				
-			}
 		}
-	}
+		catch (NoElementsException e) {
+			
+		}
 
+}
+
+	
 }

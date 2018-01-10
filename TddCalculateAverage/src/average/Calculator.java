@@ -14,8 +14,12 @@ public class Calculator {
 		elements.add(element);
 	}
 	
-	public double average() {
+	public double average()  throws NoElementsException {
 		double sum = 0;
+		
+		if(elements.size() == 0) {
+			throw new NoElementsException();
+		}
 		
 		for (Double element : elements) {
 			sum += element;
